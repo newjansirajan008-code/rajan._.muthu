@@ -1,11 +1,3 @@
-/* =====================================================
-   SMART CANTEEN
-   Main Application JavaScript
-===================================================== */
-
-
-/* ================= CART ================= */
-
 let cart =
     JSON.parse(
         localStorage.getItem("smartCanteenCart")
