@@ -1,0 +1,1244 @@
+-][12/* =====================================================
+   SMART CANTEEN
+   Food Delivery Style UI
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --orange: #ff6500;
+    --orange-dark: #e95300;
+
+    --green: #20a464;
+
+    --black: #171717;
+    --grey: #686868;
+
+    --light: #f7f7f7;
+    --white: #ffffff;
+
+    --border: #eeeeee;
+
+    --shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+}
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--light);
+
+    color: var(--black);
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    height: 70px;
+
+    padding:
+        0 7%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.logo span {
+
+    color: var(--orange);
+}
+
+
+.search {
+
+    flex: 1;
+
+    max-width: 600px;
+
+    height: 45px;
+
+    background:
+        #f5f5f5;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    color: #777;
+}
+
+
+.search input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+}
+
+
+.cart {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.cart b {
+
+    position: absolute;
+
+    background: var(--orange);
+
+    color: white;
+
+    width: 19px;
+
+    height: 19px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 10px;
+
+    top: -13px;
+
+    right: -10px;
+}
+
+
+/* ================= LOCATION ================= */
+
+.location-bar {
+
+    padding:
+        13px 7%;
+
+    background: white;
+
+    font-size: 12px;
+
+    color: #666;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.location-bar strong {
+
+    color: #222;
+}
+
+.green {
+
+    color: var(--green);
+}
+
+
+/* ================= MAIN ================= */
+
+.menu-page {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        35px 25px 100px;
+}
+
+
+.welcome {
+
+    margin-bottom: 25px;
+}
+
+
+.welcome p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.welcome h1 {
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+
+.welcome h1 span {
+
+    color: var(--orange);
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.category {
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding:
+        10px 17px;
+
+    border-radius: 25px;
+
+    white-space: nowrap;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.category:hover {
+
+    border-color:
+        var(--orange);
+
+    color:
+        var(--orange);
+}
+
+
+.category.active {
+
+    background:
+        var(--orange);
+
+    border-color:
+        var(--orange);
+
+    color: white;
+}
+
+
+/* ================= SMART OFFER ================= */
+
+.smart-offer {
+
+    background:
+        linear-gradient(
+            110deg,
+            #fff1e7,
+            #fff9f5
+        );
+
+    border:
+        1px solid #ffe0cd;
+
+    border-radius: 14px;
+
+    padding:
+        20px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.smart-offer span {
+
+    color:
+        var(--orange);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.smart-offer h2 {
+
+    margin:
+        5px 0;
+
+    font-size: 20px;
+}
+
+
+.smart-offer p {
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.offer-icon {
+
+    font-size: 45px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section-title {
+
+    margin-bottom: 18px;
+}
+
+
+.section-title small {
+
+    color:
+        var(--orange);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.section-title h2 {
+
+    margin-top: 3px;
+
+    font-size: 22px;
+}
+
+
+/* ================= FOOD GRID ================= */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ================= FOOD CARD ================= */
+
+.food-card {
+
+    background: white;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #eeeeee;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+
+.food-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* ================= FOOD IMAGE ================= */
+
+.food-image {
+
+    height: 170px;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+    font-size: 80px;
+}
+
+
+.biryani {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1b5,
+            #ffbd72
+        );
+}
+
+
+.fried {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0c8,
+            #ffd98a
+        );
+}
+
+
+.parotta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4db,
+            #ffe2a8
+        );
+}
+
+
+.puffs {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe5cc,
+            #ffbc83
+        );
+}
+
+
+.lemon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4ffd1,
+            #d7ed75
+        );
+}
+
+
+.tomato {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0df,
+            #ffaaa6
+        );
+}
+
+
+.curd {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9ff,
+            #cce8ff
+        );
+}
+
+
+.drink {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2f7ff,
+            #a7dff2
+        );
+}
+
+
+/* ================= TAG ================= */
+
+.tag {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    padding:
+        5px 8px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    color:
+        var(--orange);
+
+    box-shadow:
+        0 2px 7px rgba(0,0,0,.08);
+}
+
+
+/* ================= FOOD CONTENT ================= */
+
+.food-content {
+
+    padding:
+        15px;
+}
+
+
+.food-name {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap: 5px;
+}
+
+
+.food-name h3 {
+
+    font-size: 15px;
+}
+
+
+.rating {
+
+    color:
+        #e69500;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.food-content p {
+
+    color:
+        #777;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin:
+        6px 0 15px;
+
+    min-height: 33px;
+}
+
+
+.food-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+}
+
+
+.food-bottom strong {
+
+    font-size: 18px;
+}
+
+
+.food-bottom button {
+
+    border:
+        1px solid var(--orange);
+
+    background: white;
+
+    color:
+        var(--orange);
+
+    padding:
+        7px 14px;
+
+    border-radius: 6px;
+
+    font-weight: 800;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.food-bottom button:hover {
+
+    background:
+        var(--orange);
+
+    color: white;
+}
+
+
+/* ================= MOBILE CART ================= */
+
+.mobile-cart {
+
+    display: none;
+}
+
+
+/* ================= CART PAGE ================= */
+
+.cart-page {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding:
+        40px 20px;
+}
+
+
+.cart-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr;
+
+    gap: 25px;
+}
+
+
+.cart-box,
+.summary-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid var(--border);
+}
+
+
+.cart-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        15px 0;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.cart-item-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 10px;
+
+    background: #fff0e7;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 30px;
+}
+
+
+.cart-item-info {
+
+    flex: 1;
+}
+
+
+.cart-item-info h3 {
+
+    font-size: 14px;
+}
+
+
+.cart-item-info p {
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+.qty {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.qty button {
+
+    width: 28px;
+
+    height: 28px;
+
+    background: white;
+
+    color: var(--orange);
+
+    border:
+        1px solid var(--orange);
+
+    border-radius: 5px;
+}
+
+
+.summary-row {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    padding:
+        9px 0;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+.summary-total {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    border-top:
+        1px solid var(--border);
+
+    padding-top: 15px;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+
+.checkout-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    background:
+        var(--orange);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: block;
+
+    text-align: center;
+}
+
+
+/* ================= CHECKOUT ================= */
+
+.checkout-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+}
+
+
+.form-box {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid var(--border);
+}
+
+
+.form-box label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin:
+        18px 0 6px;
+}
+
+
+.form-box input,
+.form-box select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-page {
+
+    min-height: 80vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 30px;
+}
+
+
+.success-card {
+
+    background: white;
+
+    padding: 45px;
+
+    max-width: 450px;
+
+    width: 100%;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.success-icon {
+
+    font-size: 60px;
+}
+
+
+.token {
+
+    font-size: 48px;
+
+    color:
+        var(--orange);
+
+    font-weight: 900;
+
+    margin:
+        15px 0;
+}
+
+
+/* ================= TRACKING ================= */
+
+.tracking-page {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+
+.tracking-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.track-token {
+
+    text-align: center;
+
+    background:
+        #fff1e8;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.track-token h1 {
+
+    color:
+        var(--orange);
+
+    font-size: 38px;
+}
+
+
+.timeline {
+
+    margin-top: 25px;
+}
+
+
+.timeline-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.timeline-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+}
+
+
+.timeline-item.completed
+.timeline-icon {
+
+    background:
+        #dff7e9;
+
+    color:
+        var(--green);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 1000px) {
+
+    .food-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media(max-width: 750px) {
+
+    .header {
+
+        padding:
+            0 15px;
+
+        gap: 12px;
+    }
+
+    .logo {
+
+        font-size: 17px;
+    }
+
+    .search {
+
+        display: none;
+    }
+
+    .cart span {
+
+        display: none;
+    }
+
+    .menu-page {
+
+        padding:
+            25px 15px 100px;
+    }
+
+    .welcome h1 {
+
+        font-size: 27px;
+    }
+
+    .food-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .food-image {
+
+        height: 145px;
+
+        font-size: 65px;
+    }
+
+    .food-content {
+
+        padding: 12px;
+    }
+
+    .food-name h3 {
+
+        font-size: 13px;
+    }
+
+    .food-content p {
+
+        font-size: 10px;
+    }
+
+    .smart-offer {
+
+        padding: 15px;
+    }
+
+    .smart-offer h2 {
+
+        font-size: 16px;
+    }
+
+    .offer-icon {
+
+        font-size: 32px;
+    }
+
+    .mobile-cart {
+
+        display: flex;
+
+        position: fixed;
+
+        bottom: 15px;
+
+        left: 15px;
+
+        right: 15px;
+
+        height: 55px;
+
+        background:
+            var(--orange);
+
+        color: white;
+
+        text-decoration: none;
+
+        border-radius: 8px;
+
+        align-items: center;
+
+        justify-content:
+            space-between;
+
+        padding:
+            0 18px;
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        box-shadow:
+            0 8px 30px
+            rgba(255,101,0,.3);
+
+        z-index: 200;
+    }
+
+    .cart-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width: 420px) {
+
+    .food-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .food-image {
+
+        height: 125px;
+
+        font-size: 55px;
+    }
+
+    .food-bottom strong {
+
+        font-size: 15px;
+    }
+
+    .food-bottom button {
+
+        padding:
+            6px 9px;
+
+        font-size: 9px;
+    }
+
+}
