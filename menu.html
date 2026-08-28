@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCanteen - Menu</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        🍽️ <span>Smart</span>Canteen
+    </div>
+
+    <div class="search">
+
+        🔍
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search biryani, parotta, rice..."
+            onkeyup="searchFood()"
+        >
+
+    </div>
+
+    <a href="cart.html" class="cart">
+
+        🛒
+
+        <span>Cart</span>
+
+        <b id="cartCount">0</b>
+
+    </a>
+
+</header>
+
+
+<!-- ================= LOCATION ================= -->
+
+<div class="location-bar">
+
+    📍 <strong>College Canteen</strong>
+
+    <span>
+        • Open now
+    </span>
+
+    <span class="green">
+        • 10–15 min
+    </span>
+
+</div>
+
+
+<!-- ================= PAGE ================= -->
+
+<main class="menu-page">
+
+
+    <div class="welcome">
+
+        <p>Good food. Student price. Zero waiting.</p>
+
+        <h1>
+            What are you
+            <span>craving?</span> 😋
+        </h1>
+
+    </div>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <div class="categories">
+
+        <button
+            class="category active"
+            onclick="filterFood('all',this)">
+            🍽️ All
+        </button>
+
+        <button
+            class="category"
+            onclick="filterFood('biryani',this)">
+            🍗 Biryani
+        </button>
+
+        <button
+            class="category"
+            onclick="filterFood('rice',this)">
+            🍚 Rice
+        </button>
+
+        <button
+            class="category"
+            onclick="filterFood('parotta',this)">
+            🫓 Parotta
+        </button>
+
+        <button
+            class="category"
+            onclick="filterFood('snacks',this)">
+            🥐 Snacks
+        </button>
+
+        <button
+            class="category"
+            onclick="filterFood('drinks',this)">
+            🥤 Drinks
+        </button>
+
+    </div>
+
+
+    <!-- ================= SMART OFFER ================= -->
+
+    <div class="smart-offer">
+
+        <div>
+
+            <span>💡 SMART STUDENT OFFER</span>
+
+            <h2>
+                Hungry but on a budget?
+            </h2>
+
+            <p>
+                Variety rice from just ₹30.
+                Perfect for students!
+            </p>
+
+        </div>
+
+        <div class="offer-icon">
+            💰
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOD ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <div>
+
+                <small>POPULAR TODAY</small>
+
+                <h2>
+                    Recommended for you
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-grid" id="foodGrid">
+
+
+            <!-- BIRYANI -->
+
+            <article
+                class="food-card"
+                data-category="biryani"
+                data-name="Chicken Biryani">
+
+                <div class="food-image biryani">
+
+                    🍗
+
+                    <span class="tag">
+                        🔥 Bestseller
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Chicken Biryani
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Flavorful biryani with
+                        chicken and special masala.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹80
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Chicken Biryani',
+                                80,
+                                '🍗'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRIED RICE -->
+
+            <article
+                class="food-card"
+                data-category="rice"
+                data-name="Chicken Fried Rice">
+
+                <div class="food-image fried">
+
+                    🍚
+
+                    <span class="tag">
+                        Popular
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Chicken Fried Rice
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Fried rice with chicken,
+                        vegetables and sauces.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹80
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Chicken Fried Rice',
+                                80,
+                                '🍚'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PAROTTA -->
+
+            <article
+                class="food-card"
+                data-category="parotta"
+                data-name="Parotta">
+
+                <div class="food-image parotta">
+
+                    🫓
+
+                    <span class="tag">
+                        ₹20
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Parotta
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.6
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Soft layered parotta.
+                        Perfect with salna.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹20
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Parotta',
+                                20,
+                                '🫓'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PUFFS -->
+
+            <article
+                class="food-card"
+                data-category="snacks"
+                data-name="Veg Puffs">
+
+                <div class="food-image puffs">
+
+                    🥐
+
+                    <span class="tag">
+                        Quick Bite
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Veg Puffs
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.5
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Crispy puff filled with
+                        spicy vegetable masala.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹20
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Veg Puffs',
+                                20,
+                                '🥐'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VARIETY RICE 1 -->
+
+            <article
+                class="food-card"
+                data-category="rice"
+                data-name="Lemon Rice">
+
+                <div class="food-image lemon">
+
+                    🍋
+
+                    <span class="tag">
+                        Budget Pick
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Lemon Rice
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.6
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Tangy lemon rice with
+                        peanuts and spices.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹30
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Lemon Rice',
+                                30,
+                                '🍋'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VARIETY RICE 2 -->
+
+            <article
+                class="food-card"
+                data-category="rice"
+                data-name="Tomato Rice">
+
+                <div class="food-image tomato">
+
+                    🍅
+
+                    <span class="tag">
+                        Student Pick
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Tomato Rice
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.5
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Spicy tomato flavored rice
+                        with fresh vegetables.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹30
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Tomato Rice',
+                                30,
+                                '🍅'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VARIETY RICE 3 -->
+
+            <article
+                class="food-card"
+                data-category="rice"
+                data-name="Curd Rice">
+
+                <div class="food-image curd">
+
+                    🍚
+
+                    <span class="tag">
+                        Cool & Fresh
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Curd Rice
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Cool creamy curd rice
+                        with seasoning.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹30
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Curd Rice',
+                                30,
+                                '🍚'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DRINK -->
+
+            <article
+                class="food-card"
+                data-category="drinks"
+                data-name="Cool Drink">
+
+                <div class="food-image drink">
+
+                    🥤
+
+                    <span class="tag">
+                        ₹10
+                    </span>
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-name">
+
+                        <h3>
+                            Cool Drink
+                        </h3>
+
+                        <span class="rating">
+                            ⭐ 4.4
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Chilled refreshing drink.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹10
+                        </strong>
+
+                        <button
+                            onclick="addToCart(
+                                'Cool Drink',
+                                10,
+                                '🥤'
+                            )">
+
+                            + ADD
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= MOBILE CART ================= -->
+
+<a href="cart.html" class="mobile-cart">
+
+    🛒
+
+    <span id="mobileCartText">
+        View Cart
+    </span>
+
+    <b id="mobileCartPrice">
+        ₹0
+    </b>
+
+    →
+
+</a>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
